@@ -1,0 +1,10 @@
+.header {
+    color: #fefafe;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+img {
+    border-radius: 50%;
+    max-height: 80px;
+}
