@@ -1,6 +1,10 @@
 .app {
     height: 100vh;
-    background-color: #1b1c1c;
-
     padding: 1rem;
+
+    background-color: #1b1c1c;
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
 }
