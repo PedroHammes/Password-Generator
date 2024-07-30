@@ -1,0 +1,93 @@
+.mainSection {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: start;
+    gap: 2rem;
+}
+
+.strength {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.randomPassword {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+
+    div {
+        height: 48px;
+        min-width: 200px;
+        padding: 1rem;
+
+        border-radius: .8rem;
+        background-color: #323333;
+
+        font-size: 16px;
+        text-align: start;
+        place-content: center;
+
+        flex: auto;
+    }
+
+    .copyButton {
+        height: 48px;
+        width: 64px;
+        border: none;
+        border-radius: .8rem;
+        background-color: #323333;
+        color: #fffaff;
+    }
+}
+
+.passwordLengthDiv {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+/* O estilo abaixo é aplicado ao background do input range */
+.passwordLengthInput {
+    min-width: 200px;
+    height: 1rem;
+    border-radius: .8rem;
+    padding: .5rem;
+
+    /* appearance: reseta os estilos iniciais do elemento. */
+    appearance: none; 
+    background-color: #323333;
+    outline: none;
+    flex: auto;
+}
+
+/* O estilo abaixo é aplicado à bolinha do input range */
+/* O webkit abaixo só é aplicado ao Chrome, Opera e Edge */
+.passwordLengthInput::-webkit-slider-thumb {
+    appearance: none;
+    height: .5rem;
+    width: .5rem;
+    border-radius: 50%;
+    background-color: #e2e41d;
+}
+
+.passwordLength{
+    height: 48px;
+    width: 64px;
+    border: none;
+    border-radius: .8rem;
+    background-color: #323333;
+    color: #fffaff;
+
+    text-align: center;
+    place-content: center;
+}
+
+.passwordOptionsCheckbox {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
