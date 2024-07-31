@@ -1,9 +1,35 @@
 footer {
+    width: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+.codedBy {
+    border-bottom: 1px solid #fefafe;
+    padding-bottom: .2rem;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 a {
-    color: #fefafe;
+    border: 1px solid #fefafe;
+    border-radius: .2rem;
+    padding: .2rem;
+    background-color: #fefafe;
+    color: #323333;
+
+    text-align: center;
+    place-content: center;
+    text-decoration: none;
+    font-weight: 600;
 }

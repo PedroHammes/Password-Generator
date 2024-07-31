@@ -1,4 +1,6 @@
 .mainSection {
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-flow: column wrap;
     align-items: start;
@@ -212,4 +214,10 @@
 
     font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.newPasswordButton:hover {
+    padding-bottom: 0.25rem;
 }
