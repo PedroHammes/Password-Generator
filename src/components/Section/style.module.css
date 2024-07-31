@@ -46,10 +46,18 @@
     .copyButton {
         height: 48px;
         width: 64px;
-        border: none;
+        border: 1px solid #323333;
         border-radius: .8rem;
         background-color: #323333;
         color: #fffaff;
+
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .copyButton:hover {
+        border: 1px solid #e2e41d;
+        color: #e2e41d;
     }
 }
 

@@ -42,8 +42,12 @@ export default function Section() {
         return boolean
     }
 
-    function generateNewPassword(ev) {
-        // console.log(ev)
+    function copyPassword() {
+        navigator.clipboard.writeText(randomPassword)
+        alert('Password copyed!')
+    }
+
+    function generateNewPassword() {
         let allowedCharacters = ''
         let password = ''
 
@@ -82,7 +86,7 @@ export default function Section() {
 
             <div className={styles.randomPassword}>
                 <div>{randomPassword}</div>
-                <button className={styles.copyButton}>Copy</button>
+                <button className={styles.copyButton} onClick={copyPassword}>Copy</button>
             </div>
 
             <div className={styles.passwordLengthDiv}>
@@ -96,7 +100,7 @@ export default function Section() {
                     id='passwordLengthRange'
                     onChange={(ev) => setPsswLength(ev.target.value)}   //Sempre que o usuário alterar o valor do range, este novo valor será setado como novo passwLength
                 />
-                <div className={styles.passwordLength}>{psswLength}</div>
+                <div className={styles.passwordLength}>{psswLength}</div> 
             </div>
 
 
