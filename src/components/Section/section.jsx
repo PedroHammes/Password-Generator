@@ -24,34 +24,28 @@ export default function Section() {
                 <div className={styles.passwordLength}>16</div>
             </div>
 
-            <div className={styles.passwordOptionsCheckbox}>
-
+            <div className={styles.passwordOptionsToggle}>
                 {/* toggle switch do stack overflow */}
                 <div className={styles.toggle}>
-                    <input type="checkbox" className={styles.toggleInput} id="foo"/>
-                    <label htmlFor="foo" className={styles.toggleLabel}></label>
-                </div>
-                {/* <label htmlFor="foo">Switch of Stack Overflow</label>    */}
-
-                <label htmlFor="uppercase">
-                    <input type="checkbox" id="uppercase" />
+                    <input type="checkbox" className={styles.toggleInput} id="uppercase"/>
+                    <label htmlFor="uppercase" className={styles.toggleLabel}></label>
                     <span>Include Uppercase</span>
-                </label>
-
-                <label htmlFor="lowercase">
-                    <input type="checkbox" id="lowercase" />
+                </div>
+                <div className={styles.toggle}>
+                    <input type="checkbox" className={styles.toggleInput} id="lowercase"/>
+                    <label htmlFor="lowercase" className={styles.toggleLabel}></label>
                     <span>Include Lowercase</span>
-                </label>
-
-                <label htmlFor="numbers">
-                    <input type="checkbox" id="numbers" />
+                </div>
+                <div className={styles.toggle}>
+                    <input type="checkbox" className={styles.toggleInput} id="numbers"/>
+                    <label htmlFor="numbers" className={styles.toggleLabel}></label>
                     <span>Include Numbers</span>
-                </label>
-
-                <label htmlFor="symbols">
-                    <input type="checkbox" id="numbers" />
+                </div>
+                <div className={styles.toggle}>
+                    <input type="checkbox" className={styles.toggleInput} id="symbols"/>
+                    <label htmlFor="symbols" className={styles.toggleLabel}></label>
                     <span>Include Symbols</span>
-                </label>
+                </div>
             </div>
       </section>
     )
