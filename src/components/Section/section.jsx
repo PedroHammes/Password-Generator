@@ -9,36 +9,47 @@ export default function Section() {
     const [ booleanLowercase, setBooleanLowercase ] = useState(false)
     const [ booleanNumber, setBooleanNumber ] = useState(true)
     const [ booleanSpecial, setBooleanSpecial ] = useState(false)
+    const [ passwordStrength, setPasswordStrength] = useState(20)
     const numericChars = '0123456789'
     const lowercaseChars = 'abcdefghijklmnopqrstwxyz'
     const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTWXYZ'
     const specialChars = '?/~^{}[]!@#$%&*()_-+=.,:;'
 
+    function showPasswordStrength() {
+        let strength = 0
+        
+        booleanNumber ? strength+=1 : strength+=0 
+        booleanLowercase ? strength+=1 : strength+=0
+        booleanUppercase ? strength+=1 : strength+=0
+        booleanSpecial ? strength+=1 : strength+=0
+        psswLength > 7 ? strength+=1 : strength+=0
+
+        strength = (strength/5)*100
+
+        setPasswordStrength(strength)
+    }
+
     function handleBooleanUppercase(event) {2
         let boolean = event.target.checked
         setBooleanUppercase(boolean)
-        console.log(boolean)
         return boolean
     }
 
     function handleBooleanLowercase(event) {
         let boolean = event.target.checked
         setBooleanLowercase(boolean)
-        console.log(boolean)
         return boolean
     }
 
     function handleBooleanNumber(event) {
         let boolean = event.target.checked
         setBooleanNumber(boolean)
-        console.log(boolean)
         return boolean
     }
 
     function handleBooleanSpecial(event) {
         let boolean = event.target.checked
         setBooleanSpecial(boolean)
-        console.log(boolean)
         return boolean
     }
 
@@ -74,6 +85,7 @@ export default function Section() {
         } while (password.length < psswLength)
 
         setRandomPassword(`${password}`)
+        showPasswordStrength()
     }
 
 
@@ -81,7 +93,14 @@ export default function Section() {
         <section className={styles.mainSection}>
             <div className={styles.strength}>
                 <p>Strength</p>
-                <p>o o o o o</p>
+                <div className={styles.progressBar}>
+                    <div style={{
+                            height: '50%',
+                            width: `${passwordStrength}%`,
+                            borderRadius: '0.3rem',
+                            backgroundColor: '#e2e41d',
+                    }}></div>
+                </div>
             </div>
 
             <div className={styles.randomPassword}>

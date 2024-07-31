@@ -11,14 +11,29 @@
 
     border: none;
     border-radius: .8rem;
+    padding: 1rem;
     background-color: #323333;
 
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
     font-size: 24px;
+}
+
+.progressBar {
+    height: 32px;
+    width: 100%;
+    border: 1px solid #fffaff;
+    border-radius: 0.8rem;
+    padding: .1rem 0.5rem;
+    background-color: #323333;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
 }
 
 .randomPassword {
