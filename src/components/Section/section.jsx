@@ -8,7 +8,11 @@ export default function Section() {
     const [ booleanUppercase, setBooleanUppercase ] = useState(false)
     const [ booleanLowercase, setBooleanLowercase ] = useState(false)
     const [ booleanNumber, setBooleanNumber ] = useState(true)
-    const [ booleanSymbol, setBooleanSymbol ] = useState(false)
+    const [ booleanSpecial, setBooleanSpecial ] = useState(false)
+    const numericChars = '0123456789'
+    const lowercaseChars = 'abcdefghijklmnopqrstwxyz'
+    const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTWXYZ'
+    const specialChars = '?/~^{}[]!@#$%&*()_-+=.,:;'
 
     function handleBooleanUppercase(event) {2
         let boolean = event.target.checked
@@ -31,20 +35,38 @@ export default function Section() {
         return boolean
     }
 
-    function handleBooleanSymbol(event) {
+    function handleBooleanSpecial(event) {
         let boolean = event.target.checked
-        setBooleanSymbol(boolean)
+        setBooleanSpecial(boolean)
         console.log(boolean)
         return boolean
     }
 
     function generateNewPassword(ev) {
         // console.log(ev)
-        const enabledChars = '0123456789abcdefghijklmnopqrstwxyzABCDEFGHIJKLMNOPQRSTWXYZ?/~^{}[]!@#$%&*()_-+=.,:;'
+        let allowedCharacters = ''
         let password = ''
 
+        if (!booleanNumber && !booleanLowercase && !booleanUppercase && !booleanSpecial) {
+            alert('To create some password, able some option bellow')
+        } else {
+            if (booleanNumber) {
+                allowedCharacters += numericChars
+            }
+            if (booleanLowercase) {
+                allowedCharacters += lowercaseChars
+            }
+            if (booleanUppercase) {
+                allowedCharacters += uppercaseChars
+            }
+            if (booleanSpecial) {
+                allowedCharacters += specialChars
+            }
+        }
+        
+
         do {
-            password += enabledChars[Math.floor(Math.random()*enabledChars.length)]
+            password += allowedCharacters[Math.floor(Math.random()*allowedCharacters.length)]
         } while (password.length < psswLength)
 
         setRandomPassword(`${password}`)
@@ -80,16 +102,15 @@ export default function Section() {
 
             <div className={styles.passwordOptionsToggle}>
 
-                <div className={styles.toggle}>
-                    <input 
+            <div className={styles.toggle}>
+                    <input
                         type="checkbox"
-                        className={styles.toggleInput} 
-                        id="uppercase" 
-                        checked={booleanUppercase}
-                        onChange={handleBooleanUppercase}
-                    />
-                    <label htmlFor="uppercase" className={styles.toggleLabel}></label>
-                    <span>Include Uppercase</span>
+                        className={styles.toggleInput}
+                        id="numbers"
+                        checked={booleanNumber}
+                        onChange={handleBooleanNumber}/>
+                    <label htmlFor="numbers" className={styles.toggleLabel}></label>
+                    <span>Include Numbers</span>
                 </div>
 
                 <div className={styles.toggle}>
@@ -105,25 +126,26 @@ export default function Section() {
                 </div>
 
                 <div className={styles.toggle}>
-                    <input
+                    <input 
                         type="checkbox"
-                        className={styles.toggleInput}
-                        id="numbers"
-                        checked={booleanNumber}
-                        onChange={handleBooleanNumber}/>
-                    <label htmlFor="numbers" className={styles.toggleLabel}></label>
-                    <span>Include Numbers</span>
+                        className={styles.toggleInput} 
+                        id="uppercase" 
+                        checked={booleanUppercase}
+                        onChange={handleBooleanUppercase}
+                    />
+                    <label htmlFor="uppercase" className={styles.toggleLabel}></label>
+                    <span>Include Uppercase</span>
                 </div>
 
                 <div className={styles.toggle}>
                     <input
                         type="checkbox"
                         className={styles.toggleInput}
-                        id="symbols"
-                        checked={booleanSymbol}
-                        onChange={handleBooleanSymbol}/>
-                    <label htmlFor="symbols" className={styles.toggleLabel}></label>
-                    <span>Include Symbols</span>
+                        id="special"
+                        checked={booleanSpecial}
+                        onChange={handleBooleanSpecial}/>
+                    <label htmlFor="special" className={styles.toggleLabel}></label>
+                    <span>Include special</span>
                 </div>
             </div>
 
