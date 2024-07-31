@@ -1,7 +1,7 @@
 .header {
     color: #fefafe;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     gap: 1.5rem;
 }
 
