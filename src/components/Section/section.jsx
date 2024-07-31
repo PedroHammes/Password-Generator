@@ -168,7 +168,7 @@ export default function Section() {
                         checked={booleanSpecial}
                         onChange={handleBooleanSpecial}/>
                     <label htmlFor="special" className={styles.toggleLabel}></label>
-                    <span>Include special</span>
+                    <span>Include Special</span>
                 </div>
             </div>
 
