@@ -5,16 +5,38 @@ export default function Section() {
 
     const [ randomPassword, setRandomPassword ] = useState('Password will be here')
     const [ psswLength, setPsswLength ] = useState(8)
+    const [ booleanUppercase, setBooleanUppercase ] = useState(false)
+    const [ booleanLowercase, setBooleanLowercase ] = useState(false)
+    const [ booleanNumber, setBooleanNumber ] = useState(true)
+    const [ booleanSymbol, setBooleanSymbol ] = useState(false)
 
+    function handleBooleanUppercase(event) {2
+        let boolean = event.target.checked
+        setBooleanUppercase(boolean)
+        console.log(boolean)
+        return boolean
+    }
 
-    //APAGAR O TRECHO DE CÓDIGO ABAIXO | está funcional, basta replicar nos elementos
-    // const [ teste, setTeste ] = useState(false)
+    function handleBooleanLowercase(event) {
+        let boolean = event.target.checked
+        setBooleanLowercase(boolean)
+        console.log(boolean)
+        return boolean
+    }
 
-    // function handleSwitch(event) {
-    //     let boolean = event.target.checked
-    //     setTeste(boolean)
-    //     console.log(boolean)
-    // }
+    function handleBooleanNumber(event) {
+        let boolean = event.target.checked
+        setBooleanNumber(boolean)
+        console.log(boolean)
+        return boolean
+    }
+
+    function handleBooleanSymbol(event) {
+        let boolean = event.target.checked
+        setBooleanSymbol(boolean)
+        console.log(boolean)
+        return boolean
+    }
 
     function generateNewPassword(ev) {
         // console.log(ev)
@@ -58,44 +80,48 @@ export default function Section() {
 
             <div className={styles.passwordOptionsToggle}>
 
-                {/* APAGAR O TRECHO DE CÓDIGO ABAIXO | está funcional, basta replicar nos elementos
                 <div className={styles.toggle}>
                     <input 
                         type="checkbox"
                         className={styles.toggleInput} 
                         id="uppercase" 
-                        checked={teste}
-                        onChange={handleSwitch}
-                        // defaultChecked
-                        // onClick={(ev) => console.log(ev.target.checked)} //assim que o botão é clicado retorna o valor dele: true (ativado) ou false (desativado)
-                    />
-                    <label htmlFor="uppercase" className={styles.toggleLabel}></label>
-                    <span>Teste de CheckBox</span>
-                </div> */}
-
-                <div className={styles.toggle}>
-                    <input 
-                        type="checkbox"
-                        className={styles.toggleInput} 
-                        id="uppercase" 
-                        defaultChecked
-                        onClick={(ev) => console.log(ev.target.checked)} //assim que o botão é clicado retorna o valor dele: true (ativado) ou false (desativado)
+                        checked={booleanUppercase}
+                        onChange={handleBooleanUppercase}
                     />
                     <label htmlFor="uppercase" className={styles.toggleLabel}></label>
                     <span>Include Uppercase</span>
                 </div>
+
                 <div className={styles.toggle}>
-                    <input type="checkbox" className={styles.toggleInput} id="lowercase" defaultChecked/>
+                    <input 
+                        type="checkbox" 
+                        className={styles.toggleInput} 
+                        id="lowercase"
+                        checked={booleanLowercase}
+                        onChange={handleBooleanLowercase}
+                    />
                     <label htmlFor="lowercase" className={styles.toggleLabel}></label>
                     <span>Include Lowercase</span>
                 </div>
+
                 <div className={styles.toggle}>
-                    <input type="checkbox" className={styles.toggleInput} id="numbers" defaultChecked/>
+                    <input
+                        type="checkbox"
+                        className={styles.toggleInput}
+                        id="numbers"
+                        checked={booleanNumber}
+                        onChange={handleBooleanNumber}/>
                     <label htmlFor="numbers" className={styles.toggleLabel}></label>
                     <span>Include Numbers</span>
                 </div>
+
                 <div className={styles.toggle}>
-                    <input type="checkbox" className={styles.toggleInput} id="symbols" defaultChecked/>
+                    <input
+                        type="checkbox"
+                        className={styles.toggleInput}
+                        id="symbols"
+                        checked={booleanSymbol}
+                        onChange={handleBooleanSymbol}/>
                     <label htmlFor="symbols" className={styles.toggleLabel}></label>
                     <span>Include Symbols</span>
                 </div>
