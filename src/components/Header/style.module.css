@@ -2,6 +2,7 @@
     color: #fefafe;
     display: flex;
     flex-flow: row nowrap;
+    gap: 1.5rem;
 }
 
 img {
