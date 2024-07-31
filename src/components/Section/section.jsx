@@ -26,6 +26,13 @@ export default function Section() {
 
             <div className={styles.passwordOptionsCheckbox}>
 
+                {/* toggle switch do stack overflow */}
+                <div className={styles.toggle}>
+                    <input type="checkbox" className={styles.toggleInput} id="foo"/>
+                    <label htmlFor="foo" className={styles.toggleLabel}></label>
+                </div>
+                {/* <label htmlFor="foo">Switch of Stack Overflow</label>    */}
+
                 <label htmlFor="uppercase">
                     <input type="checkbox" id="uppercase" />
                     <span>Include Uppercase</span>
