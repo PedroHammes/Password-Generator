@@ -4,6 +4,7 @@ import styles from './style.module.css'
 export default function Section() {
 
     const [ randomPassword, setRandomPassword ] = useState('senha aleatória')
+    const [ psswLength, setPsswLength ] = useState(2)
 
     function generateNewPassword(ev) {
         // console.log(ev)
@@ -12,10 +13,11 @@ export default function Section() {
         
         do {
             password += enabledChars[Math.floor(Math.random()*enabledChars.length)]
-        } while (password.length < 8)
+        } while (password.length < psswLength)
 
         setRandomPassword(`${password}`)
     }
+
 
     return (
         <section className={styles.mainSection}>
@@ -36,8 +38,9 @@ export default function Section() {
                     max={16}
                     step={1}
                     className={styles.passwordLengthInput}
+                    onChange={(ev) => setPsswLength(ev.target.value)}   //Sempre que o usuário alterar o valor do range, este novo valor será setado como novo passwLength
                 />
-                <div className={styles.passwordLength}>16</div>
+                <div className={styles.passwordLength}>{psswLength}</div>
             </div>
 
             <div className={styles.passwordOptionsToggle}>
