@@ -5,6 +5,10 @@
     gap: 1.5rem;
 }
 
+.username {
+    color: #e2e41d;
+}
+
 img {
     border-radius: 50%;
     max-height: 80px;
