@@ -25,6 +25,7 @@ export default function Section() {
             </div>
 
             <div className={styles.passwordOptionsCheckbox}>
+
                 <label htmlFor="uppercase">
                     <input type="checkbox" id="uppercase" />
                     <span>Include Uppercase</span>

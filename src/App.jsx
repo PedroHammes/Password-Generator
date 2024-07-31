@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className={styles.app}>
 
-      <Header avatar="https://i.pinimg.com/736x/47/e9/8c/47e98c2e2f37c11e18952afdeaf86791.jpg"/>
+      <Header avatar="https://i.pinimg.com/236x/db/a3/dd/dba3dd4e1e37ec9243d543bd6763f02a.jpg"/>
 
       <Section />
 
