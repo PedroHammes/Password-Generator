@@ -25,7 +25,6 @@ export default function Section() {
             </div>
 
             <div className={styles.passwordOptionsToggle}>
-                {/* toggle switch do stack overflow */}
                 <div className={styles.toggle}>
                     <input type="checkbox" className={styles.toggleInput} id="uppercase"/>
                     <label htmlFor="uppercase" className={styles.toggleLabel}></label>
@@ -46,6 +45,10 @@ export default function Section() {
                     <label htmlFor="symbols" className={styles.toggleLabel}></label>
                     <span>Include Symbols</span>
                 </div>
+            </div>
+
+            <div className={styles.newPasswordDiv}>
+                <button className={styles.newPasswordButton}>Generate new password</button>
             </div>
       </section>
     )
