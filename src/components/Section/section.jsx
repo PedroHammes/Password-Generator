@@ -1,6 +1,22 @@
+import { useState } from 'react'
 import styles from './style.module.css'
 
 export default function Section() {
+
+    const [ randomPassword, setRandomPassword ] = useState('senha aleatória')
+
+    function generateNewPassword(ev) {
+        // console.log(ev)
+        const enabledChars = '0123456789abcdefghijklmnopqrstwxyzABCDEFGHIJKLMNOPQRSTWXYZ?/~^{}[]!@#$%&*()_-+=.,:;'
+        let password = ''
+        
+        do {
+            password += enabledChars[Math.floor(Math.random()*enabledChars.length)]
+        } while (password.length < 8)
+
+        setRandomPassword(`${password}`)
+    }
+
     return (
         <section className={styles.mainSection}>
             <div className={styles.strength}>
@@ -9,7 +25,7 @@ export default function Section() {
             </div>
 
             <div className={styles.randomPassword}>
-                <div>0123456789abcdf!</div>
+                <div>{randomPassword}</div>
                 <button className={styles.copyButton}>Copy</button>
             </div>
 
@@ -48,7 +64,10 @@ export default function Section() {
             </div>
 
             <div className={styles.newPasswordDiv}>
-                <button className={styles.newPasswordButton}>Generate new password</button>
+                <button 
+                    className={styles.newPasswordButton}
+                    onClick={generateNewPassword}
+                >Generate new password</button>
             </div>
       </section>
     )
