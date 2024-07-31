@@ -11,5 +11,6 @@
 
 img {
     border-radius: 50%;
+    border: 2px solid #e2e41d;
     max-height: 80px;
 }
