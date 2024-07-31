@@ -1,4 +1,4 @@
-![alt text](image.png)
+![alt text](./src/image.png)
 # Password Generator (PwG)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -38,7 +38,7 @@ npm run dev
 > Atenção: selecione no mínimo uma característica para sua senha, caso contrário será retornada uma mensagem de erro.
 
 ## Imagens do projeto
-![mobile small](image-1.png)
-![mobile large](image-2.png)
-![tablet](image-3.png)
-![computer](image-4.png)
+![mobile small](./src/image-1.png)
+![mobile large](./src/image-2.png)
+![tablet](./src/image-3.png)
+![computer](./src/image-4.png)
