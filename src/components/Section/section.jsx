@@ -3,7 +3,7 @@ import styles from './style.module.css'
 
 export default function Section() {
 
-    const [ randomPassword, setRandomPassword ] = useState('Password will be here')
+    const [ randomPassword, setRandomPassword ] = useState('Your password will be here')
     const [ psswLength, setPsswLength ] = useState(8)
     const [ booleanUppercase, setBooleanUppercase ] = useState(false)
     const [ booleanLowercase, setBooleanLowercase ] = useState(false)
@@ -92,7 +92,7 @@ export default function Section() {
     return (
         <section className={styles.mainSection}>
             <div className={styles.strength}>
-                <p>Strength</p>
+                <p>Your password strength is <span style={{color: '#e2e41d'}}>{passwordStrength}%</span></p>
                 <div className={styles.progressBar}>
                     <div style={{
                             height: '50%',
