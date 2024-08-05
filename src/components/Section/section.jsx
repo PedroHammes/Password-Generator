@@ -9,7 +9,7 @@ export default function Section() {
     const [ booleanLowercase, setBooleanLowercase ] = useState(false)
     const [ booleanNumber, setBooleanNumber ] = useState(true)
     const [ booleanSpecial, setBooleanSpecial ] = useState(false)
-    const [ passwordStrength, setPasswordStrength] = useState(20)
+    const [ passwordStrength, setPasswordStrength] = useState(40)
     const numericChars = '0123456789'
     const lowercaseChars = 'abcdefghijklmnopqrstwxyz'
     const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTWXYZ'
@@ -55,7 +55,6 @@ export default function Section() {
 
     function copyPassword() {
         navigator.clipboard.writeText(randomPassword)
-        alert('Password copyed!')
     }
 
     function generateNewPassword() {
