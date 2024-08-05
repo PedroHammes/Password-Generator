@@ -1,5 +1,6 @@
 footer {
     width: 100%;
+    max-width: 500px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
