@@ -5,6 +5,7 @@
     flex-flow: column wrap;
     align-items: start;
     gap: 1.6rem;
+    background-color: #e2e41d;
 }
 
 .strength {
