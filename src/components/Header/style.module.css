@@ -3,14 +3,15 @@
     display: flex;
     flex-flow: row wrap;
     gap: 1.5rem;
+    font-size: 14px;
 }
 
 .username {
     color: #e2e41d;
 }
 
-img {
+/* img {
     border-radius: 50%;
     border: 2px solid #e2e41d;
     max-height: 80px;
-}
+} */

@@ -1,12 +1,12 @@
 .app {
     height: 100vh;
-    padding: 2rem 2rem;
+    padding: 1rem 1.0rem;
 
     background-color: #1b1c1c;
     color: #fefafe;
     
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
 }

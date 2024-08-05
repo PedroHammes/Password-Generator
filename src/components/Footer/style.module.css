@@ -1,23 +1,25 @@
 footer {
     width: 100%;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    font-weight: 600;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: end;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .codedBy {
+    width: 40%;
     border-bottom: 1px solid #fefafe;
     padding-bottom: .2rem;
+    text-align: center;
 }
 
 .links {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: end;
     gap: 1rem;
 }
 
@@ -31,5 +33,6 @@ a {
     text-align: center;
     place-content: center;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    cursor: pointer;
 }

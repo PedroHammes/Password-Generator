@@ -4,38 +4,40 @@
     display: flex;
     flex-flow: column wrap;
     align-items: start;
-    gap: 2.5rem;
+    gap: 1.6rem;
 }
 
 .strength {
     width: 100%;
-    height: 100px;
+    height: 48px;
 
     border: none;
-    border-radius: .8rem;
-    padding: 1rem;
+    border-radius: .6rem;
+    padding: 0.15rem;
     background-color: #323333;
 
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
     align-items: center;
 
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .progressBar {
-    height: 32px;
+    height: 24px;
     width: 100%;
-    border: 1px solid #fffaff;
-    border-radius: 0.8rem;
+    /* border: 1px solid #fffaff; */
+    border-radius: 0.6rem;
     padding: .1rem 0.5rem;
     background-color: #323333;
+
 
     display: flex;
     flex-flow: row nowrap;
     justify-content: start;
     align-items: center;
+    flex: initial;
 }
 
 .randomPassword {
@@ -46,11 +48,11 @@
     gap: 1rem;
 
     div {
-        height: 48px;
+        height: 40px;
         min-width: 200px;
-        padding: 1rem;
+        padding-left: 1rem;
 
-        border-radius: .8rem;
+        border-radius: .6rem;
         background-color: #323333;
 
         font-size: 16px;
@@ -61,10 +63,10 @@
     }
 
     .copyButton {
-        height: 48px;
+        height: 40px;
         width: 64px;
         border: 1px solid #323333;
-        border-radius: .8rem;
+        border-radius: .6rem;
         background-color: #323333;
         color: #fffaff;
 
@@ -89,8 +91,8 @@
 /* O estilo abaixo é aplicado ao background do input range */
 .passwordLengthInput {
     min-width: 200px;
-    height: 1rem;
-    border-radius: .8rem;
+    height: 1.15rem;
+    border-radius: .4rem;
     padding: .5rem;
 
     /* appearance: reseta os estilos iniciais do elemento. */
@@ -104,17 +106,17 @@
 /* O webkit abaixo só é aplicado ao Chrome, Opera e Edge */
 .passwordLengthInput::-webkit-slider-thumb {
     appearance: none;
-    height: .5rem;
-    width: .5rem;
+    height: .75rem;
+    width: .75rem;
     border-radius: 50%;
     background-color: #e2e41d;
 }
 
 .passwordLength{
-    height: 48px;
+    height: 40px;
     width: 64px;
     border: none;
-    border-radius: .8rem;
+    border-radius: .6rem;
     background-color: #323333;
     color: #fffaff;
 
@@ -126,7 +128,7 @@
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
-    gap: .5rem;
+    gap: .75rem;
 }
 
 
@@ -148,7 +150,7 @@
 .toggleLabel {
     position: relative;
     display: block;
-    height: 24px;
+    height: 16px;
     width: 56px;
     /* EDITAR O PADDING PARA CENTRALIZAR A BOLINHA */
     padding: .8rem;
@@ -195,7 +197,7 @@
 
 .newPasswordDiv {
     width: 100%;
-    height: 48px;
+    height: 40px;
 
     display: flex;
     flex-flow: row nowrap;
@@ -204,11 +206,11 @@
 }
 
 .newPasswordButton {
-    height: 48px;
+    height: 40px;
     width: 200px;
 
     border: 2px solid #e2e41d;
-    border-radius: .8rem;
+    border-radius: .6rem;
     background-color: #e2e41d;
     color: #323333;
 
