@@ -40,7 +40,7 @@ Você também pode visualizar o projeto aqui: [Password Generator](https://pedro
 > Atenção: selecione no mínimo uma característica para sua senha, caso contrário será retornada uma mensagem de erro.
 
 ## Imagens do projeto
-![mobile small](./src/image-1.png)
-![mobile large](./src/image-2.png)
-![tablet](./src/image-3.png)
-![computer](./src/image-4.png)
+![smartphone](./src/smartphone-view.png)
+![tablet-landscape](./src/tablet-landscape.png)
+![tablet-portrait](./src/tablet-portrait.png)
+![computer](./src/computer.png)
