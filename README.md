@@ -29,6 +29,8 @@ npm run dev
 ````
 4. Clique no link para visualizar o projeto no navegador
 
+Você também pode visualizar o projeto aqui: [Password Generator](https://pedrohammes.github.io/Password-Generator/)
+
 ## Instruções de uso
 * Defina o tamanho da senha desejada
 * Escolha as características desejadas para sua senha
