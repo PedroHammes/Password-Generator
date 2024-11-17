@@ -36,4 +36,4 @@ Use a aplicação aqui: [Password Generator](https://pedrohammes.github.io/Passw
 * Quanto mais requisitos sua senha atender, maior será a barra de força (Strength).
 * Os atributos que fazem sua senha ser mais forte são: números, minúsculas, maiúsculas, símbolos e ter mais de 7 caracteres.
 
-> Atenção: selecione no mínimo uma característica para sua senha, caso contrário será retornada uma mensagem de erro.
+> Atenção: selecione no mínimo uma característica para sua senha, caso contrário uma mensagem de erro será retornada.
