@@ -5,8 +5,8 @@
 	![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 ---
-![Mockup-desktop](./src/Mockup%20App%20Pedro%20MacBook.jpg)
 ![Mockup-smartphone](./src/Mockup%20JPG%20App%20Pedro%20Celular.jpg)
+![Mockup-desktop](./src/Mockup%20App%20Pedro%20MacBook.jpg)
 ---
 
 ## Sobre o PsswG
